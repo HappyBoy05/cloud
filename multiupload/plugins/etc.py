@@ -5,7 +5,6 @@
 import asyncio, random
 from config import Config
 from telethon import events, Button
-from multiupload.fsub import *
 from multiupload import anjana
 
 s = ["CAADBAADxgkAAjQF0VL5yl4Td0utTgI",
