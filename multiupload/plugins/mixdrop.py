@@ -6,7 +6,6 @@ import asyncio, os, requests, time
 from requests import post
 from multiupload import anjana
 from telethon.sync import events, Button
-from multiupload.fsub import *
 from multiupload.utils import downloader, humanbytes
 from config import Config
 
