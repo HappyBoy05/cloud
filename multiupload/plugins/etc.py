@@ -20,8 +20,8 @@ async def start(event):
 		await asyncio.sleep(3)
 	user_id = event.sender_id
 	xx = await event.get_chat()
-	if event.is_private and not await check_participant(user_id, f'@{Config.CHNAME}', event):
-		return
+	if event.reply_to_msg_id:
+		pass
 	else:
 		await anjana.send_file(event.chat_id, random.choice(s), reply_to=event)
 		await event.reply(f"Hey [{xx.first_name}]({xx.id}), I am **MultiUploader**", buttons=[
