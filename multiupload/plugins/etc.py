@@ -35,8 +35,8 @@ async def help(event):
 		await asyncio.sleep(3)
 	user_id = event.sender_id
 	xx = await event.get_chat()
-	if event.is_private and not await check_participant(user_id, f'@{Config.CHNAME}', event):
-		return
+	if event.is_private:
+         pass
 	else:
 		helpmsg = '''
 ➖ **Help Menu | MultiUpload Bot**➖
