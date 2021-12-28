@@ -12,8 +12,6 @@ from config import Config
 @anjana.on(events.NewMessage(pattern='^/ufile'))
 async def ufile(event):
 	user_id = event.sender_id
-	if event.is_private and not await check_participant(user_id, f'@{Config.CHNAME}', event):
-		return
 	if event.reply_to_msg_id:
 		pass
 	else:
@@ -68,7 +66,7 @@ Server: UFile
 NOTE: Bandwidth limit is 1MB/s. After a month files will be deleted.'''
 	await msg.edit(hmm, buttons=(
 		[Button.url('📦 Download', r3.json()['url'])],
-		[Button.url('Support Chat 💭', 't.me/hxsupport')]
+		[Button.url('Support Chat 💭', 't.me/hb4all')]
 		))
 
 	os.remove(result.name)
