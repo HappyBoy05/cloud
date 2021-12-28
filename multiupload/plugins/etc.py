@@ -35,7 +35,7 @@ async def help(event):
 		await asyncio.sleep(3)
 	user_id = event.sender_id
 	xx = await event.get_chat()
-	if event.is_private:
+	if event.reply_to_msg_id:
          pass
 	else:
 		helpmsg = '''
